@@ -1,0 +1,13 @@
+<div class="d-flex flex-wrap mb-4">
+    <h1 class="flex-grow-1" i18n="@@student.add.headline">Add Student</h1>
+    <div>
+        <a routerLink="/students" class="btn btn-secondary" i18n="@@student.add.back">Back to list</a>
+    </div>
+</div>
+<form [formGroup]="addForm" (ngSubmit)="handleSubmit()">
+    <app-input-row [group]="addForm" field="name" i18n-label="@@student.name.label" label="Name" />
+    <app-input-row [group]="addForm" field="email" i18n-label="@@student.email.label" label="Email" />
+    <app-input-row [group]="addForm" field="address" rowType="textarea" i18n-label="@@student.address.label" label="Address" />
+    <app-input-row [group]="addForm" field="phone" i18n-label="@@student.phone.label" label="Phone" />
+    <input type="submit" i18n-value="@@student.add.headline" value="Add Student" class="btn btn-primary mt-4" />
+</form>
